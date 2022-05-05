@@ -8,7 +8,7 @@ html {
 
 body, h1, h2, h3, p, figure{
     padding: 0; margin: 0;
-    background-color: white;
+    /* background-color: white; */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -60,7 +60,7 @@ header .limitador {
 
 nav {
     width: 65%;
-    background-color: tomato;
+    /* background-color: tomato; */
 }
 
 .icone {
@@ -69,6 +69,12 @@ nav {
     height: 50px;
     display: inline-block; /*Sempre que quise dar altura para o elemento e ele não for um elemento, devemos usar display: block ou inline block;*/
 }
+
+nav h2 {
+    text-align: right;
+}
+
+
     h2 a {
         color: black;
     }
@@ -93,4 +99,38 @@ nav {
         position: absolute;
         right: 0;
         left: 0;
+    }
+
+    /* Section com a classe destaque */
+
+    .destaque{
+        background-image: url(../imagens/fundo-destaque.jpg);
+        height: 90vh;
+        color: white;
+        background-size: cover;
+        background-attachment: fixed;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+          /*Se não tiver flex, o justify content e o 
+        align-items: center não funcionam;*/
+    }
+
+    .destaque h2 {
+        font-size: clamp(2rem, 8vw, 7rem); /*Clamp (valorMin, ideal, maximo)*/
+        animation-name: fadeIn;
+        animation-duration: 1.5s;
+    }
+
+    .destaque p{
+        font-size: clamp(1.6rem, 2vw, 4rem); /*Clamp (valorMin, ideal, maximo)*/
+        animation-name: fadeIn 1s backwards;
+        /* backwards ele faz com que o elemento apareça com a animação */
+    }
+
+
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to { opacity: 1;}
     }
