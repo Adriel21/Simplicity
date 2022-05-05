@@ -110,8 +110,8 @@ nav h2 {
         background-size: cover;
         background-attachment: fixed;
         display: flex;
-        justify-content: center;
-        text-align: center;
+        justify-content: center; /*Centraliza o elemento*/
+        text-align: center; /*Centraliza o conteúdo*/
         align-items: center;
           /*Se não tiver flex, o justify content e o 
         align-items: center não funcionam;*/
@@ -125,7 +125,7 @@ nav h2 {
 
     .destaque p{
         font-size: clamp(1.6rem, 2vw, 4rem); /*Clamp (valorMin, ideal, maximo)*/
-        animation-name: fadeIn 1s backwards;
+        animation: fadeIn 1.5s 1s backwards;
         /* backwards ele faz com que o elemento apareça com a animação */
     }
 
@@ -133,4 +133,88 @@ nav h2 {
     @keyframes fadeIn {
         from {opacity: 0;}
         to { opacity: 1;}
+    }
+
+    .front-end, .localizacao {
+        text-align: center;
+    }
+
+    section h2 {
+        text-align: center;
+        padding: 1rem;
+    }
+
+    section p {
+        padding: 0.5rem 0 0.5rem 0;
+    }
+
+    figure {
+        text-align: center;
+        margin: 1rem 0;
+    }
+
+    .historia {
+        background-image: url(../imagens/fundo-madeira.jpg);
+        background-attachment: fixed;
+        background-size: cover;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+    
+
+    .historia h2 {
+        color: white;
+        text-shadow: black 1px 1px 2px; /*Adicionar sombra no shadow - pesquisar*/
+    }
+
+    iframe {
+        width: 100%;
+        border: none;
+    }
+
+    .historia iframe {
+        max-width: 800px;
+    }
+
+    footer {
+        background-color: black;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        height: 14vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Media queries */
+
+    @media screen and (min-width: 600px){
+        .icone {
+            display: none;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem;
+        }
+
+        .menu a{
+            padding: 0 1rem;
+        }
+    }
+
+    @media screen and (min-width: 800px) {
+        html {
+            font-size: 18px;
+        }
+
+        header .limitador {
+            height: 15vh;
+        }
+
+        .destaque {
+            height: 85vh;
+        }
     }
