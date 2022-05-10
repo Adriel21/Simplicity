@@ -187,6 +187,62 @@ nav h2 {
         justify-content: center;
     }
 
+
+
+
+
+
+    /* Formatando Páginas Internas */
+.conteudo {
+    background-color: whitesmoke;
+    padding: 0.7rem;
+    border-radius: 7px;
+}
+
+table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+table {
+    width: 80%;
+    margin: auto;
+    max-width: 700px;
+}
+
+th {
+    background-color: black;
+    color: white;
+}
+
+td {
+    background-color: white;
+}
+
+th, td {
+    width: 33%;
+    padding: 0.5rem;
+}
+
+td:first-child {
+    text-transform: uppercase;
+}
+
+td:nth-child(2) {
+    text-align: center;
+}
+
+td:last-child{
+    color: blue;
+}
+
+caption {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+
+
     /* Media queries */
 
     @media screen and (min-width: 600px){
