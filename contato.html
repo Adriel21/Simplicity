@@ -311,9 +311,22 @@ doc.addEventListener('input', inputHandler.bind(undefined, docMask, 14), false);
     textMensagem.on ('input', function() {
 
         let conteudo = textMensagem.val();
+
+        // Criando a contagem regressiva
         let contagem = quantidade - conteudo.length;
-        console.log(contagem);
+        // console.log(contagem);
+        bCaracteres.text(contagem);
+
+        if (contagem == 0) {
+            spanMaximo.innerHTML = 'Limite de caracteres alcançado';
+            spanMaximo.style.color = 'red';
+        } else {
+            spanMaximo.innerHTML = ("(Restam <b id= 'caracteres'>" +contagem+ "</b> caracteres)");
+            spanMaximo.style.color = 'black';
+        }
     });
+
+    
 </script>
 
 </body>

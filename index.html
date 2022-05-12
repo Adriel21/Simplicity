@@ -15,6 +15,9 @@
 
     <!-- CSS Externo -->
     <link rel="stylesheet" href="css/estilo.css">
+
+    <!-- Inserindo bxslider -->
+    <link rel="stylesheet" href="plugins/bxslider/jquery.bxslider.css">
 </head>
 <body>
     <!-- Iniciando área do cabeçalho -->
@@ -41,16 +44,18 @@
 
 <!-- Área do conteúdo principal -->
 <main>
-    <section class="destaque">
+    <!-- <section class="destaque">
         <div>
         <h2>HTML5 e CSS3</h2>
         <p>A porta de entrada para o desenvolvimento web.</p>
        </div>
-    </section>
+    </section> -->
 
     <!-- Slider -->
     <section class="slider">
-
+        <div><img src="imagens/slide1.jpg" alt=""></div>
+        <div><img src="imagens/slide2.jpg" alt=""></div>
+        <div><img src="imagens/slide3.jpg" alt=""></div>
     </section>
 
     <!-- Área de conteúdo de texto + 3 imagens -->
@@ -91,5 +96,17 @@
 </footer>
 
 <script src="js/menu.js"></script>
+
+<!-- bxslider js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="plugins/bxslider/jquery.bxslider.js"></script>
+<script src="/path/to/jquery.bxslider.min.js"></script>
+
+<!-- Initialize the slider-->
+<script>
+  $(document).ready(function(){
+    $('.slider').bxSlider();
+  });
+</script>
 </body>
 </html>
